@@ -1,7 +1,15 @@
 # Financial Market Analytics Dashboard
 
 ## Description
+## Live Dashboard
 
+Interactive dashboard built with Looker Studio, connected directly to BigQuery:
+
+**[View Dashboard](https://lookerstudio.google.com/reporting/8627f325-3dc9-407b-83b4-dfba30d1ec55)**
+
+![Crypto Market Analytics Dashboard](assets/dashboard.png)
+
+The dashboard queries BigQuery in real time — every ETL run is immediately reflected in the visualizations.
 This project implements a modular ETL (Extract, Transform, Load) pipeline that retrieves cryptocurrency market data from the CoinGecko API, transforms it into a clean dataset using Pandas, and loads it into Google BigQuery.
 
 The cloud data warehouse serves as the foundation for interactive dashboards in Looker Studio.
@@ -46,6 +54,7 @@ Looker Studio
 * Git
 * GitHub
 * pip freeze > requirements.txt
+* Looker Studio
 ---
 
 ## Project Structure
@@ -53,8 +62,11 @@ Looker Studio
 ```text
 financial-dashboard/
 │
-├── data/
-│ 
+├── assets/
+│   └── dashboard.png
+│
+├── notebooks/
+│   └── api_exploration.ipynb
 │
 ├── src/
 │   ├── config.py
@@ -63,9 +75,10 @@ financial-dashboard/
 │   ├── load.py
 │   └── main.py
 │
+├── .env.example
+├── .gitignore
 ├── README.md
-├── requirements.txt
-└── .gitignore
+└── requirements.txt
 ```
 
 ---
@@ -148,7 +161,6 @@ Authentication is handled through a Google Cloud service account using the `GOOG
 
 ## Future Improvements
 
-- Build an interactive dashboard with Looker Studio.
 - Automate the ETL pipeline.
 - Store historical cryptocurrency prices.
 - Add unit tests.
