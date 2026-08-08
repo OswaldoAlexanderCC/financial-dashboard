@@ -1,0 +1,14 @@
+# Credentials
+credentials/
+
+# Data
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# System
+.DS_Store
+.vscode/

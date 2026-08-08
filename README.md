@@ -1,0 +1,158 @@
+# Financial Market Analytics Dashboard
+
+## Description
+
+This project implements a modular ETL (Extract, Transform, Load) pipeline that retrieves cryptocurrency market data from the CoinGecko API, transforms it into a clean dataset using Pandas, and loads it into Google BigQuery.
+
+The cloud data warehouse serves as the foundation for interactive dashboards in Looker Studio.
+The project serves as the data foundation for future analytics in BigQuery and interactive dashboards in Looker Studio.
+
+---
+
+## Objectives
+
+- Extract cryptocurrency market data from the CoinGecko API.
+- Transform and clean the data using Pandas.
+- Load processed data into Google BigQuery.- Build a scalable ETL pipeline following data engineering best practices.
+- Prepare the data for future visualization in Looker Studio.
+
+---
+
+## ETL Workflow
+
+CoinGecko API
+      │
+      ▼
+Extract (Python)
+      │
+      ▼
+Transform (Pandas)
+      │
+      ▼
+BigQuery
+      │
+      ▼
+Looker Studio
+---
+
+## Technologies Used
+
+* Python
+* Pandas
+* Requests
+* Google BigQuery
+* pandas-gbq
+* SQL
+* Git
+* GitHub
+---
+
+## Project Structure
+
+```text
+financial-dashboard/
+│
+├── data/
+│ 
+│
+├── src/
+│   ├── config.py
+│   ├── extract.py
+│   ├── transform.py
+│   ├── load.py
+│   └── main.py
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/financial-dashboard.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd financial-dashboard
+```
+
+Create and activate the virtual environment:
+
+```bash
+conda create -n financial python=3.12
+conda activate financial
+```
+
+Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+Run the ETL pipeline:
+
+```bash
+python src/main.py
+```
+
+The pipeline will:
+
+- Extract cryptocurrency market data from the CoinGecko API.
+- Transform the dataset.
+- Load the processed data into a SQLite database.
+
+---
+
+## Data Warehouse
+
+The ETL loads the processed data into Google BigQuery:
+
+* **Dataset:** `crypto_data`
+* **Table:** `crypto_market`
+
+Authentication is handled through a Google Cloud service account using the `GOOGLE_APPLICATION_CREDENTIALS` environment variable.
+
+- `crypto_market`
+
+---
+
+## Current Features
+
+- Modular ETL architecture.
+- Configuration management using `config.py`.
+- Error handling with `try/except`.
+- Logging with Python `logging`.
+- Google BigQuery integration.
+- Service account authentication via environment variables.
+- SQL-ready dataset for analytics.
+
+---
+
+## Future Improvements
+
+- Build an interactive dashboard with Looker Studio.
+- Automate the ETL pipeline.
+- Store historical cryptocurrency prices.
+- Add unit tests.
+- Deploy the pipeline to the cloud.
+
+---
+
+## Author
+
+**Alexander Cadena**
+
+Industrial Engineering Student
+
+Interested in Data Analytics, Business Intelligence and Data Engineering.
