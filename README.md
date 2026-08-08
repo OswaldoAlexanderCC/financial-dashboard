@@ -45,6 +45,7 @@ Looker Studio
 * SQL
 * Git
 * GitHub
+* pip freeze > requirements.txt
 ---
 
 ## Project Structure
@@ -91,7 +92,13 @@ conda activate financial
 ```
 
 Install the dependencies:
+Create a `.env` file based on the provided example:
 
+```bash
+cp .env.example .env
+```
+
+Then place your Google Cloud service account key in `credentials/service-account.json`.
 ```bash
 pip install -r requirements.txt
 ```

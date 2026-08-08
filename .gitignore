@@ -12,3 +12,6 @@ __pycache__/
 # System
 .DS_Store
 .vscode/
+
+# Environment
+.env

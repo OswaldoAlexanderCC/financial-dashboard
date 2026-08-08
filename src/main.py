@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+
+load_dotenv()
 from extract import extract_market_data
 from transform import transform_market_data
 from load import load_market_data
